@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../data/bism.png';
 
 function Sura(props) {
     let { id, title, totalaya, ayats } = props;
+    const [Ani, setAni] = useState(false);
+
+    const HandelMouseOver = () => {
+        setAni(!Ani);
+        //console.log("Mouse Over Now!::", Ani);
+    }
     return (
-        <div className="col-sm-3">
-            <div className="card shadow-lg p-3 mb-3 rounded">
+        <div className="col-sm-3" onMouseEnter={HandelMouseOver} onMouseLeave={HandelMouseOver}>
+            <div className={Ani ? "card p-3 mb-3 rounded" : "card shadow-lg p-3 mb-3 rounded"}>
                 <div className="text-left">
                     <button type="button" className="btn btn-primary">
                         <span className="badge badge-light">{id}</span>
@@ -26,3 +32,4 @@ function Sura(props) {
     )
 }
 export default Sura;
+
