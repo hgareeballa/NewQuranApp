@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import SuraSearch from './SuraSearch';
+import LogoImage from './LogoImage';
 
 function SuraPage(props) {
     window.scrollTo(0, 0);
@@ -12,6 +13,7 @@ function SuraPage(props) {
     }
     return (
         <div>
+            <LogoImage />
             <SuraSearch setF={setF} />
             <SoraHeader name={name} />
             <ul className="list-group text-right">

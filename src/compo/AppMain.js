@@ -3,7 +3,7 @@ import SuraSearch from './SuraSearch';
 import LoadingPage from './LoadingPage';
 import SuraGrid from './SuraGrid';
 import { QuranContext } from '../QuranContext';
-import logo from '../data/quran.png';
+import LogoImage from './LogoImage';
 
 
 let suraArray = [];
@@ -36,11 +36,3 @@ function AppMain() {
 }
 export default AppMain;
 
-
-function LogoImage() {
-    return (
-        <div className="text-center container-sm">
-            <img src={logo} className="img-responsive rounded-circle" style={{ width: 100, height: 100 }} alt="Quran Logo"></img>
-        </div>
-    )
-}
