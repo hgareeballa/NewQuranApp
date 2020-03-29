@@ -14,8 +14,8 @@ function Sura(props) {
     }
     return (
         <div className="col-sm-3" onMouseEnter={HandelMouseOver} onMouseLeave={HandelMouseOver}>
-            <Link type="button" to={{ pathname: '/sura', ayats: ayats, name: title }}>
-                <div className={Ani ? "card shadow-lg p-3 mb-3 rounded border border-primary" : "card p-3 mb-3 rounded "}>
+            <Link to={{ pathname: '/sura', ayats: ayats, name: title }}>
+                <div className={Ani ? "card shadow-lg p-4 mb-3 rounded border border-primary" : "card p-4 mb-3 rounded "}>
                     <div className="text-left">
                         <button type="button" className="btn btn-primary">
                             <span className="badge badge-light">{id}</span>
